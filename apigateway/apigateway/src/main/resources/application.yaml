@@ -1,0 +1,21 @@
+server:
+    port:8080
+spring:
+    application:
+        name: "api-gateway"
+zuul:
+    routes:
+        movie-info-service:
+            url:
+                http://localhost:8085
+        ratings-data-service:
+            url:
+                http://localhost:8086
+        movie-catalog-service:
+            url:
+                http://localhost:8084
+
+
+
+
+
